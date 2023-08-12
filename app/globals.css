@@ -25,3 +25,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply text-yellow-500;
+}
+
+.swiper-pagination-bullet {
+  @apply !text-blue-600 !bg-blue-600;
+}
+
+.swiper-pagination-bullet-active {
+  color: rgb(234 179 8) !important;
+  background: rgb(234 179 8) !important;
+  @apply !text-yellow-500 !bg-yellow-500;
+}
