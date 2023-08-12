@@ -11,7 +11,7 @@ export default function Tabs(props: any) {
 
     return (
         <div className="mx-auto bg-white">
-            <div className="flex">
+            <div className="flex isolate  divide-x divide-white-500">
                 {children.map((child: any) => (
                     <button
                         key={child.props.label}

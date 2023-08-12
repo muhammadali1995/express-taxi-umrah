@@ -35,7 +35,7 @@ export const Navbar = () => {
                         </Link>
                         <button
                             type="button"
-                            className="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden"
+                            className="-m-2.5 rounded-md p-2.5 text-white lg:hidden"
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="sr-only">Open main menu</span>
