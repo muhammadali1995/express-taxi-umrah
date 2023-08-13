@@ -246,12 +246,12 @@ export default function Home() {
               Arabistonida umra ziyoratiga boruvchi ziyoratchilarga ishonchli,
               professional va hamyonbop taksi xizmatlarini taklif etamiz.
               Bizning haydovchilarimiz tajribali va muqaddas joylar haqida
-              ma'lumotga ega, shuning uchun siz ishonchli qo'llarda
-              ekanligingizga amin bo'lishingiz mumkin. Biz, shuningdek, tanlash
+              ma&lsquo;lumotga ega, shuning uchun siz ishonchli qo&lsquo;llarda
+              ekanligingizga amin bo&lsquo;lishingiz mumkin. Biz, shuningdek, tanlash
               uchun transport vositalarining keng assortimentini taklif etamiz,
-              shuning uchun siz o'zingizning ehtiyojlaringiz va byudjetingizga
+              shuning uchun siz o&lsquo;zingizning ehtiyojlaringiz va byudjetingizga
               mos keladiganini topishingiz mumkin. Umra taksingizni bron qilish
-              uchun bugun biz bilan bog'laning!
+              uchun bugun biz bilan bog&lsquo;laning!
             </p>
             <CarCarousel />
           </div>
