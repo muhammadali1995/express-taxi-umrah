@@ -15,8 +15,8 @@ export default function Tabs(props: any) {
                 {children.map((child: any) => (
                     <button
                         key={child.props.label}
-                        className={`${activeTab === child.props.label ? `bg-white text-gray-900 ${border}` : 'bg-yellow-500 text-white'
-                            } flex-1  font-bold py-4`}
+                        className={`${activeTab === child.props.label ? `bg-white  text-gray-900 ${border}` : 'bg-yellow-500 text-white'
+                            } flex-1  font-bold py-2.5 lg:py-4 text-xs md:text-base `}
                         onClick={e => handleClick(e, child.props.label)}
                     >
                         {child.props.label}
