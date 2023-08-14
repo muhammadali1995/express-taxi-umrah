@@ -24,18 +24,14 @@ const carImages = [
 export default function CarCarousel() {
     return (
         <Swiper
-            slidesPerView={4}
+            modules={[Navigation, Pagination]}
+            slidesPerView={1}
             spaceBetween={40}
             loop={true}
             navigation={false}
             pagination={{ clickable: true }}
-            modules={[Navigation, Pagination]}
             className="mySwiper"
             breakpoints={{
-                0: {
-                    width: 0,
-                    slidesPerView: 1,
-                },
                 768: {
                     width: 768,
                     slidesPerView: 2,
@@ -54,8 +50,8 @@ export default function CarCarousel() {
         >
             {carImages.map((obj: any, i) => {
                 return (
-                    <SwiperSlide key={i} className='w-full h-80'>
-                        <Image src={obj.src} alt='car image' width={280} height={320} className='h-80 lg:h-96 w-full' />
+                    <SwiperSlide key={i} className='w-full lg:h-80 relative'>
+                        <Image src={obj.src} alt='car image' width={100} height={100} className='max-h-[300px] lg:h-96 max-w-xs w-full' />
                     </SwiperSlide>
                 )
             })}
