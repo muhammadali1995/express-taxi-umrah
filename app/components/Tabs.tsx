@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function Tabs(props: any) {
-    const { children } = props
+    const { children, border } = props
     const [activeTab, setActiveTab] = useState(children[0].props.label);
 
     const handleClick = (e: any, newActiveTab: any) => {
@@ -15,7 +15,7 @@ export default function Tabs(props: any) {
                 {children.map((child: any) => (
                     <button
                         key={child.props.label}
-                        className={`${activeTab === child.props.label ? 'bg-white text-gray-900' : 'bg-yellow-500 text-white'
+                        className={`${activeTab === child.props.label ? `bg-white text-gray-900 ${border}` : 'bg-yellow-500 text-white'
                             } flex-1  font-bold py-4`}
                         onClick={e => handleClick(e, child.props.label)}
                     >
