@@ -11,7 +11,7 @@ import { AiTwotoneStar } from 'react-icons/ai'
 
 
 function classNames(...classes: any) {
-    return classes.filter(Boolean).join(' ')
+    return classes.filter(Boolean).join(" ");
 }
 
 export default function ReviewSlider() {
@@ -90,4 +90,3 @@ export default function ReviewSlider() {
         </Swiper >
     )
 }
-

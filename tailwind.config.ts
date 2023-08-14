@@ -14,6 +14,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "trust-car": "url('/public/images/trusted-bg.jpg')",
         trust: "url('./public/images/trusted-bg.jpg')",
+        review: "url('/images/reviews.jpg')"
       },
     },
   },

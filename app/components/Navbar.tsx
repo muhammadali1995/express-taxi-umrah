@@ -13,9 +13,8 @@ const navigation = [
     { name: "Review", href: "/review" },
 ]
 
-export default function Navbar({ textColor }) {
+export default function Navbar({ textColor }: {textColor?: string}) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    console.log(textColor)
     return (
         <header className='absolute inset-x-0 top-0 z-50'>
             <div className="mx-auto max-w-7xl">
@@ -36,7 +35,7 @@ export default function Navbar({ textColor }) {
                         </Link>
                         <button
                             type="button"
-                            className="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden"
+                            className="-m-2.5 rounded-md p-2.5 text-white lg:hidden"
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="sr-only">Open main menu</span>

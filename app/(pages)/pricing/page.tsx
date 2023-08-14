@@ -9,7 +9,7 @@ import Navbar from '@/app/components/Navbar'
 export default function Pricing() {
     return (
         <div className='bg-white'>
-            <Navbar />
+            <Navbar textColor={'#fff'} />
             <div className="relative">
                 <div className="mx-auto max-w-7xl">
                     <div className="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
@@ -63,7 +63,7 @@ export default function Pricing() {
             <div className="mx-w-7xl mx-auto my-10">
                 <h1 className="text-3xl lg:text-[44px] text-center mb-2">Narxlarni Xisoblang</h1>
                 <p className="bg-gray-900 text-yellow-500 text-center lg:text-2xl py-2 max-w-7xl mx-auto w-full">
-                    Aeroportda olib ketish oldindan to'lanadi.
+                    Aeroportda olib ketish oldindan to&lsquo;lanadi.
                 </p>
             </div>
 

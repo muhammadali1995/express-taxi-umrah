@@ -1,10 +1,4 @@
-import React from 'react'
-
-export default function Tab(props: any) {
-    const { label, children } = props
-    return (
-        <div label={label} className="hidden">
-            {children}
-        </div>
-    );
-};
+export default function Tab(props: { label: string; children: any }) {
+  const { children } = props;
+  return <div className="hidden">{children}</div>;
+}
