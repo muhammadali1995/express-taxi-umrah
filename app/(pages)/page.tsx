@@ -1,10 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from 'next/link'
 import GetTaxiForm from "../components/GetTaxiForm";
-import { Navbar } from "../components/Navbar";
-import Footer from '../components/Footer'
+import Navbar from "@/app/components/Navbar";
 import TrustBg from '/public/images/trusted-bg.jpg'
 import trustCar from '/public/images/Camry-p.png'
 import ReviewSlider from "../components/ReviewSlider";
@@ -14,19 +13,13 @@ import Tabs from "../components/Tabs";
 import Tab from "../components/Tab";
 import { GiCarSeat, GiBoatPropeller } from 'react-icons/gi';
 
-function classNames(...classes: any) {
-  return classes.filter(Boolean).join(' ')
-}
 
 export default function Home() {
 
 
   return (
     <div className="bg-white">
-      <header className="absolute inset-x-0 top-0 z-50">
-        <Navbar />
-      </header>
-
+      <Navbar textColor='text-gray-900' />
       <div className="relative">
         <div className="mx-auto max-w-7xl">
           <div className="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
@@ -106,11 +99,16 @@ export default function Home() {
             <button className="bg-yellow-500 text-black font-semibold px-5 py-3">Taksi Buyurtma qiling</button>
           </div>
           <div className="mt-10 lg:0">
-            <Image src={trustCar} alt="trusted cur" sizes="(max-width: 512px)" style={{ position: 'relative' }} className=" mx-auto max-w-lg w-full" />
+            <Image src={trustCar} alt="trusted cur" width={100} height={100} style={{ position: 'relative' }} className=" mx-auto max-w-lg w-full" />
           </div>
         </div>
       </div>
-
+      <div className="mx-w-7xl mx-auto mb-10">
+        <h1 className="text-3xl lg:text-[44px] text-center mb-2">Har bir byudjet uchun mashina</h1>
+        <p className="bg-gray-900 text-yellow-500 text-center lg:text-2xl py-2 max-w-7xl mx-auto w-full">
+          Aeroportda olib ketish oldindan to'lanadi.
+        </p>
+      </div>
       <div className="max-w-7xl mx-auto shadow-lg">
         <Tabs>
           {ServicePriceForCar.map((item: any) => {
@@ -179,8 +177,6 @@ export default function Home() {
           <CarCarousel />
         </div>
       </div>
-
-      <Footer></Footer>
     </div>
   );
 }

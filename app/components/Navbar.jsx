@@ -1,9 +1,9 @@
+'use client'
 import { useState } from 'react'
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from 'next/image'
 import Link from 'next/link';
-import logo from '/public/images/logo.png'
 
 const navigation = [
     { name: "Home", href: "/" },
@@ -13,10 +13,11 @@ const navigation = [
     { name: "Review", href: "/review" },
 ]
 
-export const Navbar = () => {
+export default function Navbar({ textColor }) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    console.log(textColor)
     return (
-        <>
+        <header className='absolute inset-x-0 top-0 z-50'>
             <div className="mx-auto max-w-7xl">
                 <div className="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
                     <nav
@@ -29,8 +30,8 @@ export const Navbar = () => {
                                 alt="MakkaExpress"
                                 width={100}
                                 height={100}
-                                className="h-8 max-w-[200px] w-full"
-                                src={logo}
+                                className="h-8 w-auto"
+                                src="/images/logo.png"
                             />
                         </Link>
                         <button
@@ -46,7 +47,7 @@ export const Navbar = () => {
                                 <Link
                                     key={item.name}
                                     href={item.href}
-                                    className="text-sm  cursor-pointer font-semibold leading-6 text-gray-900 hover:text-yellow-500"
+                                    className={`text-sm  cursor-pointer font-semibold leading-6 text-gray-900 hover:text-yellow-500 ${textColor}`}
                                 >
                                     {item.name}
                                 </Link>
@@ -70,7 +71,7 @@ export const Navbar = () => {
                                 className="h-8 w-auto"
                                 width={100}
                                 height={32}
-                                src={logo}
+                                src="/images/logo.png"
                                 alt="makka express logo"
                             />
                         </a>
@@ -108,7 +109,7 @@ export const Navbar = () => {
                     </div>
                 </Dialog.Panel>
             </Dialog>
-        </>
+        </header>
 
     )
 }
