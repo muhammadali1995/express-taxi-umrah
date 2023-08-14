@@ -103,76 +103,78 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mx-w-7xl mx-auto mb-10">
-        <h1 className="text-3xl lg:text-[44px] text-center mb-2">Har bir byudjet uchun mashina</h1>
-        <p className="bg-gray-900 text-yellow-500 text-center lg:text-2xl py-2 max-w-7xl mx-auto w-full">
-          Aeroportda olib ketish oldindan to'lanadi.
-        </p>
-      </div>
-      <div className="max-w-7xl mx-auto shadow-lg">
-        <Tabs>
-          {ServicePriceForCar.map((item: any) => {
-            return <Tab key={item.name} label={item.name}>
-              <div className="flex p-10 flex-col lg:flex-row">
-                <div className="w-full lg:w-1/2">
-                  <h1 className="text-2xl font-bold capitalize mb-4">{item.model}</h1>
-                  <ul className="pl-5">
-                    {item.directions.map((direction: any, index: number) => {
-                      return <li key={index} className="list-disc text-gray-600">
-                        <span className="font-bold">{direction.from}</span>
-                        <span className="mx-1">{direction.to !== '' && 'to'}</span>
-                        <span className="font-bold">{direction.to} {direction.price}SR</span>
-                      </li>
-                    })}
-                  </ul>
-                  <ul className="mt-5">
-                    <li className="list-disc font-semibold text-gray-600 text-lg leading-none">{item.desc}</li>
-                  </ul>
-                  <div className="flex w-1/2 mt-5 gap-x-5">
-                    <div className="flex items-center">
-                      <GiCarSeat className='w-6 h-5 text-yellow-400' />
-                      <span className="text-xl ml-2 text-gray-700">{item.numOfSeats} seats</span>
-                    </div>
-                    {
-                      item.ac && <div className="flex items-center">
-                        <GiBoatPropeller className='w-6 h-6 text-yellow-400' />
-                        <span className="text-xl ml-2 text-gray-700">AC</span>
+      <div className="py-12 lg:py-24 px-5 md:px-10 lg:px-0">
+        <div className="mx-w-7xl mx-auto mb-10">
+          <h1 className="text-3xl lg:text-[44px] text-center mb-2">Har bir byudjet uchun mashina</h1>
+          <p className="bg-gray-900 text-yellow-500 text-center lg:text-2xl py-2 max-w-7xl mx-auto w-full">
+            Aeroportda olib ketish oldindan to&#39;lanadi.
+          </p>
+        </div>
+        <div className="max-w-7xl mx-auto shadow-lg">
+          <Tabs>
+            {ServicePriceForCar.map((item: any) => {
+              return <Tab key={item.name} label={item.name}>
+                <div className="flex p-5 lg:p-10 flex-col lg:flex-row">
+                  <div className="w-full lg:w-1/2">
+                    <h1 className="md:text-xl lg:text-2xl font-bold capitalize mb-4">{item.model}</h1>
+                    <ul className="pl-5">
+                      {item.directions.map((direction: any, index: number) => {
+                        return <li key={index} className="list-disc text-gray-600 text-sm lg:text-base">
+                          <span className="font-bold">{direction.from}</span>
+                          <span className="mx-1">{direction.to !== '' && 'to'}</span>
+                          <span className="font-bold">{direction.to} {direction.price}SR</span>
+                        </li>
+                      })}
+                    </ul>
+                    <ul className="mt-5">
+                      <li className="list-disc font-semibold text-gray-600 text-lg leading-none">{item.desc}</li>
+                    </ul>
+                    <div className="flex w-1/2 mt-5 gap-x-5">
+                      <div className="flex items-center">
+                        <GiCarSeat className='w-6 h-5 text-yellow-400' />
+                        <span className="text-xl ml-2 text-gray-700">{item.numOfSeats} seats</span>
                       </div>
-                    }
+                      {
+                        item.ac && <div className="flex items-center">
+                          <GiBoatPropeller className='w-6 h-6 text-yellow-400' />
+                          <span className="text-xl ml-2 text-gray-700">AC</span>
+                        </div>
+                      }
+                    </div>
+                  </div>
+                  <div className="w-full lg:w-1/2 relative flex items-center my-10 lg:my-0">
+                    <Image src={item.imgSrc} alt="car image" width={512} height={512} className="mx-auto" />
                   </div>
                 </div>
-                <div className="w-full lg:w-1/2 relative flex items-center my-10 lg:my-0">
-                  <Image src={item.imgSrc} alt="car image" width={512} height={512} className="mx-auto" />
-                </div>
-              </div>
-            </Tab>
-          })}
-        </Tabs>
+              </Tab>
+            })}
+          </Tabs>
 
+        </div>
       </div>
 
-      <div className="bg- lg:py-24 sm:py-32">
+      <div className="sm:py-12 lg:py-24  px-5 md:px-10 lg:px-0">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-2xl my-10">
-            <h2 className="text-3xl lg:text-[44px] font-bold text-center capitalize tracking-tight text-gray-900 sm:text-4xl">Express Taksi xizmati haqida boshqalar nima deydi</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-[44px] font-bold text-center capitalize tracking-tight text-gray-900 sm:text-4xl">Express Taksi xizmati haqida boshqalar nima deydi</h2>
           </div>
           <ReviewSlider />
         </div>
       </div>
-      <div className="py-24 px-10 lg:px-0">
+      <div className="py-10 lg:py-24 px-5 md:px-10 lg:px-0">
         <div className="max-w-7xl mx-auto">
           <p className="text-gray-600 font-semibold mb-5">Express Taksi Xizmati -</p>
-          <h1 className="text-3xl lg:text-[44px] text-gray-600 font-semibold mb-5">Express Taksi Xizmati Transport Vositalari</h1>
-          <p className="text-gray-600 mb-5">
+          <h1 className="text-2xl md:text-3xl lg:text-[44px] text-gray-600 font-semibold mb-5">Express Taksi Xizmati Transport Vositalari</h1>
+          <p className="text-sm md:text-base text-gray-600 mb-5">
             Saudiya Arabistonida eng yaxshi umra taksi xizmatini qidiryapsizmi?
             Express taksi xizmatidan boshqaga qaramang.
             Saudiya Arabistonida umra ziyoratiga boruvchi ziyoratchilarga ishonchli,
             professional va hamyonbop taksi xizmatlarini taklif etamiz.
-            Bizning haydovchilarimiz tajribali va muqaddas joylar haqida ma'lumotga ega,
-            shuning uchun siz ishonchli qo'llarda ekanligingizga amin bo'lishingiz mumkin.
+            Bizning haydovchilarimiz tajribali va muqaddas joylar haqida ma&#39;lumotga ega,
+            shuning uchun siz ishonchli qo&#39;llarda ekanligingizga amin bo&#39;lishingiz mumkin.
             Biz, shuningdek, tanlash uchun transport vositalarining keng assortimentini taklif etamiz,
-            shuning uchun siz o'zingizning ehtiyojlaringiz va byudjetingizga mos keladiganini topishingiz mumkin.
-            Umra taksingizni bron qilish uchun bugun biz bilan bog'laning!
+            shuning uchun siz o&#39;zingizning ehtiyojlaringiz va byudjetingizga mos keladiganini topishingiz mumkin.
+            Umra taksingizni bron qilish uchun bugun biz bilan bog&#39;laning!
           </p>
           <CarCarousel />
         </div>
