@@ -1,25 +1,26 @@
 "use client";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GiBoatPropeller, GiCarSeat } from "react-icons/gi";
 import CarCarousel from "../components/CarCarousel";
 import Footer from "../components/Footer";
 import GetTaxiForm from "../components/GetTaxiForm";
-import { Navbar } from "../components/Navbar";
+import TrustBg from "/public/images/trusted-bg.jpg";
+import trustCar from "/public/images/Camry-p.png";
 import ReviewSlider from "../components/ReviewSlider";
 import Tab from "../components/Tab";
 import Tabs from "../components/Tabs";
 import ServicePriceForCar from "../data/servicePrice.js";
-import trustCar from "/public/images/Camry-p.png";
-import TrustBg from "/public/images/trusted-bg.jpg";
 import ReviewBg from "/public/images/reviews.jpg";
 import { TaxiLine } from "../components/TaxiLine";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
-        <Navbar />
+        <Navbar textColor={"#fff"} />
       </header>
       <main>
         {/* TOP BANNER */}
@@ -247,18 +248,17 @@ export default function Home() {
               professional va hamyonbop taksi xizmatlarini taklif etamiz.
               Bizning haydovchilarimiz tajribali va muqaddas joylar haqida
               ma&lsquo;lumotga ega, shuning uchun siz ishonchli qo&lsquo;llarda
-              ekanligingizga amin bo&lsquo;lishingiz mumkin. Biz, shuningdek, tanlash
-              uchun transport vositalarining keng assortimentini taklif etamiz,
-              shuning uchun siz o&lsquo;zingizning ehtiyojlaringiz va byudjetingizga
-              mos keladiganini topishingiz mumkin. Umra taksingizni bron qilish
-              uchun bugun biz bilan bog&lsquo;laning!
+              ekanligingizga amin bo&lsquo;lishingiz mumkin. Biz, shuningdek,
+              tanlash uchun transport vositalarining keng assortimentini taklif
+              etamiz, shuning uchun siz o&lsquo;zingizning ehtiyojlaringiz va
+              byudjetingizga mos keladiganini topishingiz mumkin. Umra
+              taksingizni bron qilish uchun bugun biz bilan bog&lsquo;laning!
             </p>
             <CarCarousel />
           </div>
         </div>
         <TaxiLine />
       </main>
-      <Footer></Footer>
     </div>
   );
 }
