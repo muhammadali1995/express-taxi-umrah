@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { GiBoatPropeller, GiCarSeat } from "react-icons/gi";
 import CarCarousel from "../components/CarCarousel";
-import Footer from "../components/Footer";
 import GetTaxiForm from "../components/GetTaxiForm";
 import TrustBg from "/public/images/trusted-bg.jpg";
 import trustCar from "/public/images/Camry-p.png";
