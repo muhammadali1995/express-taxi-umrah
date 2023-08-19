@@ -15,6 +15,7 @@ import ServicePriceForCar from "../data/servicePrice.js";
 import ReviewBg from "/public/images/reviews.jpg";
 import { TaxiLine } from "../components/TaxiLine";
 import Navbar from "../components/Navbar";
+import { Button } from "../components/common/Button";
 
 export default function Home() {
   return (
@@ -115,9 +116,7 @@ export default function Home() {
                   <span className="text-blue-700 font-semibold">Umra</span>{" "}
                   ziyoratchilariga taksi xizmatini taqdim etamiz.
                 </p>
-                <button className="bg-yellow-500 text-black font-semibold px-5 py-3">
-                  Taksi Buyurtma qiling
-                </button>
+                <Button>Taksi Buyurtma qiling</Button>
               </div>
               <div className="mt-10 md:ml-5 lg:0">
                 <Image

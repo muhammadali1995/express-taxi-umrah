@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Switch } from "@headlessui/react";
+import { useState } from "react";
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");

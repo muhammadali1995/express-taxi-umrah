@@ -34,7 +34,6 @@ export default function Navbar({ textColor }: {textColor?: string}) {
                             />
                         </Link>
                         <button
-                            type="button"
                             className="-m-2.5 rounded-md p-2.5 text-white lg:hidden"
                             onClick={() => setMobileMenuOpen(true)}
                         >
