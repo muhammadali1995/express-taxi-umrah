@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import ServicePriceForCar from '@/app/data/servicePrice'
+import ServicePriceForCar from '@/app/lib/data/servicePrice'
 import { GiCarSeat, GiBoatPropeller } from 'react-icons/gi'
 import Navbar from '@/app/components/Navbar'
 

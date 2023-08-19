@@ -10,11 +10,12 @@ import trustCar from "/public/images/Camry-p.png";
 import ReviewSlider from "../components/ReviewSlider";
 import Tab from "../components/Tab";
 import Tabs from "../components/Tabs";
-import ServicePriceForCar from "../data/servicePrice.js";
+import ServicePriceForCar from "../lib/data/servicePrice.js";
 import ReviewBg from "/public/images/reviews.jpg";
 import { TaxiLine } from "../components/TaxiLine";
 import Navbar from "../components/Navbar";
 import { Button } from "../components/common/Button";
+import { Section } from "../components/common/Section";
 
 export default function Home() {
   return (
@@ -88,18 +89,9 @@ export default function Home() {
         </div>
         <TaxiLine classNames="bottom-10" />
         {/* ADVERT */}
-        <div className="bg-[rgba(0,0,0,0.9)] shadow-xl relative  lg:min-h-[768px]">
-          <div className="absolute inset-0 -z-1 rounded-lg">
-            <Image
-              src={TrustBg}
-              fill={true}
-              alt="bg image for trusted car"
-              className="bg-cover rounded-xl"
-            />
-          </div>
-
+        <Section className="bg-[rgba(0,0,0,0.9)] shadow-xl" bgImage={TrustBg}>
           <div className="bg-[rgba(0,0,0,0.8)] relative min-h-[768px] flex items-center">
-            <div className="mx-auto max-w-7xl z-10  py-16 lg:grid lg:grid-cols-2 px-10">
+            <div className="mx-auto max-w-7xl z-10 lg:grid lg:grid-cols-2 px-6">
               <div>
                 <h1 className="text-3xl lg:text-[44px] leading-[1.1] text-white mb-6 font-bold">
                   Saudiya Arabistonidegi Eng{" "}
@@ -128,12 +120,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </Section>
 
         {/* TABS */}
-        <div className="mx-auto min-h-[768px] max-w-7xl py-8">
+        <Section className="mx-auto max-w-7xl">
           <div className="mb-8 lg:mb-16 text-center">
-            <h1 className="text-2xl lg:text-[44px] text-gray-600 font-semibold lg:mb-5">
+            <h1 className="text-gray-600 section-title">
               Car for Every Budget
             </h1>
             <h2 className="text-gray-400 lg:mt-4 text-md lg:text-2xl capitalize">
@@ -209,34 +201,25 @@ export default function Home() {
               })}
             </Tabs>
           </div>
-        </div>
+        </Section>
         {/* REVIEWS */}
-        <div className="relative min-h-max lg:min-h-[768px]">
-          <div className="absolute inset-0 -z-1 overflow-hidden">
-            <Image
-              src={ReviewBg}
-              alt="bg image for reviews car"
-              className="lg:w-full relative h-[500px] lg:h-auto lg:top-[-50%]"
-            />
-          </div>
-          <div className="bg-[rgba(0,0,0,0.8)] relative py-7 sm:py-32 min-h-[500px] lg:min-h-[768px]">
-            <div className="mx-auto max-w-7xl">
-              <div className="mx-auto max-w-2xl my-8">
-                <h2 className="text-2xl font-bold text-center py-6 tracking-tight text-white sm:text-4xl uppercase">
-                  Express Taksi xizmati haqida boshqalar nima deydi
-                </h2>
-              </div>
+        <Section bgImage={ReviewBg}>
+          <div className="bg-[rgba(0,0,0,0.8)] relative  min-h-[500px] lg:min-h-[768px]">
+            <div className="mx-auto max-w-7xl w-full">
+              <h1 className="text-white section-title lg:mb-12 max-w-4xl mx-auto">
+                Express Taksi xizmati haqida boshqalar nima deydi
+              </h1>
               <div className="mx-4 lg:mx-0">
                 <ReviewSlider />
               </div>
             </div>
           </div>
-        </div>
+        </Section>
         {/* CARS */}
 
-        <div className="mx-auto  min-h-[768px] max-w-7xl py-7 lg:py-32 px-10 lg:px-0">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-3xl lg:text-[44px] text-center mb-4 lg:mb-8 text-gray-600 font-semibold">
+        <Section className="mx-auto max-w-7xl">
+          <div className="max-w-7xl mx-auto px-6 lg:px-0">
+            <h1 className="text-gray-600 section-title mx-auto max-w-4xl">
               Express Taksi Xizmati Transport Vositalari
             </h1>
             <p className="text-gray-600 mb-5">
@@ -254,7 +237,7 @@ export default function Home() {
             </p>
             <CarCarousel />
           </div>
-        </div>
+        </Section>
         <TaxiLine />
       </main>
     </div>

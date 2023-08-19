@@ -52,3 +52,40 @@ body {
   left: 0;
   animation: slide 100s linear infinite;
 }
+
+/* #region  /**=========== Typography =========== */
+.h0 {
+  @apply text-3xl font-bold md:text-5xl;
+}
+
+h1,
+.h1 {
+  @apply text-2xl font-bold md:text-5xl;
+}
+
+h2,
+.h2 {
+  @apply text-xl font-bold md:text-3xl;
+}
+
+h3,
+.h3 {
+  @apply text-lg font-bold md:text-2xl;
+}
+
+h4,
+.h4 {
+  @apply text-base font-bold md:text-lg;
+}
+
+body,
+.p {
+  @apply text-sm md:text-base;
+}
+/* #endregion  /**======== Typography =========== */
+
+/* page sections */
+
+.section-title {
+  @apply text-center pt-10 uppercase lg:pt-24 mb-3 lg:mb-5;
+}
