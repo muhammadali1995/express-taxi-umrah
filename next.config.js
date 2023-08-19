@@ -7,6 +7,9 @@ const nextConfig = {
                 hostname: 'images.unsplash.com'
             }
         ]
+    },
+    experimental: {
+        serverComponentsExternalPackages: ['mongoose']
     }
 }
 

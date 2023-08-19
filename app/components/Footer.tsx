@@ -1,7 +1,6 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
-import logo from '/public/images/logo.png'
 import { MapPinIcon, AtSymbolIcon, DevicePhoneMobileIcon } from '@heroicons/react/24/outline'
 
 const navigation = {
@@ -95,7 +94,7 @@ export default function Example() {
                         width={100}
                         height={100}
                         className="max-w-[150px] w-full mr-auto"
-                        src={logo}
+                        src='/images/logo.png'
                         alt="Company name"
                     />
                     <div className="col-span-2">
