@@ -15,11 +15,7 @@ export default function Contact() {
                 />
                 <div className="bg-[#00000080] px-7 py-32 lg:px-10 lg:min-h-[70vh] flex items-center">
                     <div className="mx-auto max-w-2xl text-center">
-<<<<<<< HEAD
-                        <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Biz Bilan Bog&#39;laning</h2>
-=======
                         <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Biz Bilan Bog&lsquo;laning</h2>
->>>>>>> a7306a13fc156f0b9915970b2eebc26ef9f324ac
                         <p className="mt-6  lg:text-xl leading-8 text-white">
                             Express Taksi Xizmati | Umra va Haj uchun Eng Yaxshi Taxsi Xizmati
                         </p>
